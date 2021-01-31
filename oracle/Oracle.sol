@@ -11,8 +11,8 @@ import "../math/SafeMath.sol";
 contract Oracle is OracleInterface, Owner{
     using SafeMath for uint;
     
-    uint public MIN_FEE = 1000 szabo; // 调用服务最低费用
-    uint public CALLBACK_GAS = 30000000; // 回调Gas
+    uint public MIN_FEE = 10000 ; // 调用服务最低费用
+    uint public CALLBACK_GAS = 3000; // 回调Gas
     
     // 查询事件，oracle后端服务会订阅该事件
     event QueryInfo(bytes32 queryId, address requester, uint fee, address callbackAddr, string callbackFUN, bytes queryData);
